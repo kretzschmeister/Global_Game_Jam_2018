@@ -11,7 +11,7 @@ public class Player_Controller : MonoBehaviour {
 	//variables for happy/sad switch
 	bool switchState = false;
 
-
+	public static float move;
 
 
 
@@ -36,7 +36,7 @@ public class Player_Controller : MonoBehaviour {
 	void FixedUpdate(){
 		
 	//	grounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckradius, groundLayer);
-		float move	= Input.GetAxis ("Horizontal");
+		 move	= Input.GetAxis ("Horizontal");
 		myRB.velocity = new Vector2 (move * maxSpeed, myRB.velocity.y);
 
 
