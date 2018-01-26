@@ -4,7 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Platform
+=======
+  - DefendText
+  - RescueText
+  - KillCountText
+  - Frienemy
+  - Signal
+>>>>>>> Developer_Branch
   layers:
   - Default
   - TransparentFX
