@@ -26,7 +26,7 @@ public class Signals : MonoBehaviour
                 timer -= Time.deltaTime;
                 if (timer <= 0)
                 {
-                    FindObjectOfType<SwitchBar>().SpendPoints(spendPoints);
+                   // FindObjectOfType<SwitchBar>().SpendPoints(spendPoints);
                     timer = nTimer;
                 }
                 //Debug.Log("happy");
