@@ -118,12 +118,12 @@ Prefab:
     - target: {fileID: 224517026282891860, guid: 4cb57decbada62b43a25c9b5c3656456,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224517026282891860, guid: 4cb57decbada62b43a25c9b5c3656456,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224022110088583806, guid: 4cb57decbada62b43a25c9b5c3656456,
         type: 2}
@@ -215,6 +215,26 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224216343938084454, guid: 4cb57decbada62b43a25c9b5c3656456,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224216343938084454, guid: 4cb57decbada62b43a25c9b5c3656456,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224517026282891860, guid: 4cb57decbada62b43a25c9b5c3656456,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 224517026282891860, guid: 4cb57decbada62b43a25c9b5c3656456,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -3.21
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cb57decbada62b43a25c9b5c3656456, type: 2}
   m_IsPrefabParent: 0
@@ -275,6 +295,8 @@ MonoBehaviour:
   moveTime: 1
   movingX: 1
   movingY: 0
+  startLeft: 0
+  startDown: 0
   moveLength: 3
 --- !u!212 &671174584
 SpriteRenderer:
@@ -954,6 +976,8 @@ MonoBehaviour:
   moveTime: 0.1
   movingX: 0
   movingY: 1
+  startLeft: 0
+  startDown: 0
   moveLength: 0.1
 --- !u!1001 &1958207142
 Prefab:
