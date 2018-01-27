@@ -47,7 +47,7 @@ public class Player_Controller : MonoBehaviour
 
         //if ( Input.Getaxis("X" && happy == true) ---> Sad
         //if ( Input.Getaxis("X" && sad   == true) ---> happy
-        if ((Input.GetAxis("X") > 0 || Input.GetKeyDown(KeyCode.F)) && timer<=0)
+        if ((Input.GetAxis("X") > 0 || Input.GetKeyDown(KeyCode.F)) && timer<=0 && SwitchBar.switchPoints >=0)
         {
             timer = nTimer;
             if (Signals.t)
