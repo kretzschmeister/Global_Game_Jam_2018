@@ -52,15 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Happy Song
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: Sad Song
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: SoundTrack
+    clip: {fileID: 8300000, guid: c81dac900522ace46bfdf57b6e28dd65, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}

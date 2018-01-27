@@ -253,7 +253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 160.99998, y: -30.99997}
+  m_AnchoredPosition: {x: 160.99998, y: -31}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &306376747
@@ -460,45 +460,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 450312824}
---- !u!1 &669092413 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1428802862244056, guid: 5b07bb41f6cc2264f9d21ece5922e1c3,
-    type: 2}
-  m_PrefabInternal: {fileID: 1958207142}
---- !u!68 &669092414
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 669092413}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.054137666, y: -0.5042491}
-  - {x: 0.112524286, y: -0.50424916}
---- !u!95 &669092421
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 669092413}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 87593277a9dfb754f84e866d9e2954ce, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &671174582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,69 +1280,6 @@ Prefab:
     - target: {fileID: 4800232845262644, guid: 5b07bb41f6cc2264f9d21ece5922e1c3, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114320441506312190, guid: 5b07bb41f6cc2264f9d21ece5922e1c3,
-        type: 2}
-      propertyPath: maxSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 61032180420275992, guid: 5b07bb41f6cc2264f9d21ece5922e1c3,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61412403450372604, guid: 5b07bb41f6cc2264f9d21ece5922e1c3,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4800232845262644, guid: 5b07bb41f6cc2264f9d21ece5922e1c3, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4608846952248372, guid: 5b07bb41f6cc2264f9d21ece5922e1c3, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20552355677405308, guid: 5b07bb41f6cc2264f9d21ece5922e1c3,
-        type: 2}
-      propertyPath: m_Depth
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212217000263891098, guid: 5b07bb41f6cc2264f9d21ece5922e1c3,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 61412403450372604, guid: 5b07bb41f6cc2264f9d21ece5922e1c3,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.09499359
-      objectReference: {fileID: 0}
-    - target: {fileID: 61412403450372604, guid: 5b07bb41f6cc2264f9d21ece5922e1c3,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.52364993
-      objectReference: {fileID: 0}
-    - target: {fileID: 61032180420275992, guid: 5b07bb41f6cc2264f9d21ece5922e1c3,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.4384425
-      objectReference: {fileID: 0}
-    - target: {fileID: 61032180420275992, guid: 5b07bb41f6cc2264f9d21ece5922e1c3,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.24669081
-      objectReference: {fileID: 0}
-    - target: {fileID: 61032180420275992, guid: 5b07bb41f6cc2264f9d21ece5922e1c3,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 0.007980838
-      objectReference: {fileID: 0}
-    - target: {fileID: 61032180420275992, guid: 5b07bb41f6cc2264f9d21ece5922e1c3,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 0.19693953
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b07bb41f6cc2264f9d21ece5922e1c3, type: 2}
