@@ -38,7 +38,7 @@ public class StickyPlatform : MonoBehaviour {
 		target = null;
 	}
 
-	void FixedUpdate(){
+	void Update(){
 	
 		if (target !=null){
 			target.transform.position = transform.position + offset ;
