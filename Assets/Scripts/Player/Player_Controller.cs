@@ -30,6 +30,7 @@ public class Player_Controller : MonoBehaviour
         currentScale = transform.localScale.x;
         anim = GetComponent<Animator>();
         nTimer = timer;
+        timer = 0;
         //states = GetComponent<enumScript> ();
         myRB = GetComponent<Rigidbody2D>();
     }
@@ -42,7 +43,7 @@ public class Player_Controller : MonoBehaviour
     void FixedUpdate()
     {
 
-        timer -= Time.deltaTime;
+        timer += Time.deltaTime;
         //	grounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckradius, groundLayer);
         float move = Input.GetAxis("Horizontal");
         
@@ -51,9 +52,9 @@ public class Player_Controller : MonoBehaviour
 
         //if ( Input.Getaxis("X" && happy == true) ---> Sad
         //if ( Input.Getaxis("X" && sad   == true) ---> happy
-        if ((Input.GetAxis("X") > 0 || Input.GetKeyDown(KeyCode.F)) && timer<=0 && SwitchBar.switchPoints >=0)
+        if ((Input.GetAxis("X") > 0 || Input.GetKeyDown(KeyCode.F)) && timer>=4 && SwitchBar.switchPoints >=0)
         {
-            timer = nTimer;
+            timer = 0;
             if (Signals.t)
             {
                 Signals.t = false;
