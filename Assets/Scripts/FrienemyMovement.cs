@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FrienemyMovement : MonoBehaviour
 {
-    public bool friend = true;
+    public bool friend = true, danger =false;
     public bool runningAway = false;
     public float damage = 10;
     bool moving = false;
@@ -21,6 +21,8 @@ public class FrienemyMovement : MonoBehaviour
     public float range = 0.25f, distance, rangeT = 3;
     public float moveX = 0, moveY = 0;
     public float timer = 2;
+    public float scaryTime = 1;
+    float nScaryTime;
     // Use this for initialization
     void Start()
     {
@@ -30,6 +32,7 @@ public class FrienemyMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         nspeed = speed;
         nTimer = timer;
+        nScaryTime = scaryTime;
         timer = 0;
     }
 
@@ -38,7 +41,13 @@ public class FrienemyMovement : MonoBehaviour
     {
         Signals.friend = friend;
         State();
-
+        if (danger) {
+            scaryTime -= Time.deltaTime;
+            if (scaryTime <= 0) {
+                danger = false;
+                scaryTime = nScaryTime;
+            }
+        }
         Movement();
         if (follow && wayToGo <= 0)
         {
@@ -69,6 +78,7 @@ public class FrienemyMovement : MonoBehaviour
 
             transform.localScale = new Vector3(currentScale , currentScale, 1);
         }
+        anim.SetBool("Run", danger);
         anim.SetBool("Moving", moving);
     }
     void Movement()
@@ -95,6 +105,17 @@ public class FrienemyMovement : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Signal")
+        {
+            if (runningAway) danger = true;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         if (!friend)
         {
             if (collision.gameObject.tag == "Player")
@@ -107,14 +128,12 @@ public class FrienemyMovement : MonoBehaviour
                 }
             }
         }
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
         //enemy doesnt move when clos
         if (collision.gameObject.tag == "Signal")
         {
             if (distance >= range || !friend)
             {
+                
                 follow = false;
                 speed = nspeed;
             }

@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4730134762047434}
   - component: {fileID: 212945711126034410}
   - component: {fileID: 50785838352944120}
-  - component: {fileID: 58558928712034764}
   - component: {fileID: 114541323030480104}
   - component: {fileID: 95634665558182282}
+  - component: {fileID: 70937421742979062}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Frienemy
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1485728680352132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.58, y: -0.82, z: 0}
+  m_LocalPosition: {x: -2.69, y: -0.89, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58558928712034764
-CircleCollider2D:
+--- !u!70 &70937421742979062
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -73,12 +73,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.40204072}
-  serializedVersion: 2
-  m_Radius: 0.64179397
+  m_Offset: {x: -0.11217952, y: 0.11853254}
+  m_Size: {x: 1.0000001, y: 0.5011295}
+  m_Direction: 1
 --- !u!95 &95634665558182282
 Animator:
   serializedVersion: 3
@@ -108,12 +108,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friend: 1
+  runningAway: 0
   damage: 10
   speed: 2
   nspeed: 0
+  wayToGo: 0
   follow: 0
-  range: 1
+  range: 0.5
   distance: 0
+  rangeT: 3
   moveX: 0
   moveY: 0
   timer: 1
