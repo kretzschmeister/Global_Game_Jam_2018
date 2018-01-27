@@ -53,7 +53,7 @@ public class Player_Controller : MonoBehaviour
             if (Signals.t)
             {
                 Signals.t = false;
-                Debug.Log("false");
+               // Debug.Log("false");
             }
             else
             {
