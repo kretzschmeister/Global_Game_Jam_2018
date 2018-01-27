@@ -4,27 +4,36 @@ using UnityEngine;
 
 public class Signals : MonoBehaviour
 {
-
-    string state;
-    bool t = true;
+    public float spendPoints = 1;
+    public string state;
+    public static bool t = true;
     public static float wayToGo;
+    public float timer = 1, nTimer;
     // Use this for initialization
     void Start()
     {
-
+        nTimer = timer;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        ChangeState(t);
+        state = ChangeState(t);
         switch (state)
         {
             case "Happy":
                 wayToGo = 1;
+                timer -= Time.deltaTime;
+                if (timer <= 0)
+                {
+                   // FindObjectOfType<SwitchBar>().SpendPoints(spendPoints);
+                    timer = nTimer;
+                }
+                //Debug.Log("happy");
                 break;
             case "Sad":
                 wayToGo = -1;
+                //Debug.Log("sad");
                 break;
             default:
                 break;

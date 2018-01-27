@@ -323,6 +323,30 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 129225906}
+--- !u!1 &240980387 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1673597085570692, guid: 3ae532a1fe7a9b74ca93fcb0ca5c5e98,
+    type: 2}
+  m_PrefabInternal: {fileID: 280506017}
+--- !u!114 &240980391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 240980387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5848eb1cdb22a145bbf3173cc88fc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 0
+  t: 0
+  groundCheck: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  jumpHeight: 0
+  nextJump: 0
 --- !u!1001 &280506017
 Prefab:
   m_ObjectHideFlags: 0
@@ -374,6 +398,20 @@ Prefab:
     - target: {fileID: 1902769819687304, guid: 3ae532a1fe7a9b74ca93fcb0ca5c5e98, type: 2}
       propertyPath: m_TagString
       value: Signal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673597085570692, guid: 3ae532a1fe7a9b74ca93fcb0ca5c5e98, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 50894901266450024, guid: 3ae532a1fe7a9b74ca93fcb0ca5c5e98,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 58248740600116170, guid: 3ae532a1fe7a9b74ca93fcb0ca5c5e98,
+        type: 2}
+      propertyPath: m_Radius
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ae532a1fe7a9b74ca93fcb0ca5c5e98, type: 2}
@@ -2553,7 +2591,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33a220b887ab3a4abc5f16d76e33078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
+  nspeed: 0
+  follow: 0
+  range: 1
+  distance: 0
+  moveX: 0
+  moveY: 0
 --- !u!212 &2026358282
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2603,7 +2647,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2026358280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.47, y: 0, z: 0}
+  m_LocalPosition: {x: 6.37, y: 0.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2638,12 +2682,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &2066002745
 GameObject:
   m_ObjectHideFlags: 0
