@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SwitchBar : MonoBehaviour {
@@ -16,10 +17,14 @@ public class SwitchBar : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		switchSlider.value = switchPoints;
+        if (switchPoints <= 0) GameOver();
 	}
     public void SpendPoints(float spend) {
         
         switchPoints -= spend;
+    }
+    void GameOver() {
+        SceneManager.LoadScene("Game Over");
     }
     void FillBar() {
         switchPoints = GameVariables.signalSwitcherPoints;
