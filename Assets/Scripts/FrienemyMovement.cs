@@ -49,11 +49,11 @@ public class FrienemyMovement : MonoBehaviour
             }
         }
         Movement();
-        if (follow && wayToGo <= 0)
+        if (follow && wayToGo < 0)
         {
             speed = nspeed;
         }
-        if (distance >= rangeT)
+        if (distance >= rangeT )
         {
             speed = 0;
         }
@@ -135,12 +135,14 @@ public class FrienemyMovement : MonoBehaviour
             {
                 
                 follow = false;
+                Debug.Log("1");
                 speed = nspeed;
             }
             else
             {
                 speed = 0;
                 follow = true;
+                Debug.Log("2");
             }
 
         }
