@@ -13,10 +13,10 @@ public class Player_Controller : MonoBehaviour
     bool switchState = false;
     public float timer =4;
     float nTimer;
-
-	public static float move;
-
-    
+    float currentScale;
+	//public static float move;
+    Animator anim;
+    public bool moving = false;
     //variables for platform check
     private bool grounded = false;
     public Transform groundCheck;
@@ -24,9 +24,11 @@ public class Player_Controller : MonoBehaviour
     public LayerMask groundLayer;
     public float jumpHeight;
     public float nextJump;
-
+    
     void Start()
     {
+        currentScale = transform.localScale.x;
+        anim = GetComponent<Animator>();
         nTimer = timer;
         //states = GetComponent<enumScript> ();
         myRB = GetComponent<Rigidbody2D>();
@@ -39,11 +41,13 @@ public class Player_Controller : MonoBehaviour
     }
     void FixedUpdate()
     {
+
         timer -= Time.deltaTime;
         //	grounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckradius, groundLayer);
         float move = Input.GetAxis("Horizontal");
+        
         myRB.velocity = new Vector2(move * maxSpeed, myRB.velocity.y);
-
+        Animation();
 
         //if ( Input.Getaxis("X" && happy == true) ---> Sad
         //if ( Input.Getaxis("X" && sad   == true) ---> happy
@@ -74,5 +78,25 @@ public class Player_Controller : MonoBehaviour
             // this is an extra functional button
             //TODO: Add the extra functionality ! Maybe a door ?
         }
+    }
+    void Animation() {
+        if (myRB.velocity.x != 0)
+        {
+            moving = true;
+        }
+        else
+        {
+            moving = false;
+        }
+        if (myRB.velocity.x > 0)
+        {
+            transform.localScale = new Vector3(currentScale * -1, currentScale, 1);
+        }
+        else if (myRB.velocity.x < 0)
+        {
+
+            transform.localScale = new Vector3(currentScale, currentScale, 1);
+        }
+        anim.SetBool("Moving", moving);
     }
 }

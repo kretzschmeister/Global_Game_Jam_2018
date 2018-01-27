@@ -7,7 +7,6 @@ public class Signals : MonoBehaviour
     public float spendPoints = 1;
     public string state;
     public static bool t = true, friend;
-    public static float wayToGo;
     public float timer = 1, nTimer;
     // Use this for initialization
     void Start()
@@ -23,15 +22,8 @@ public class Signals : MonoBehaviour
         switch (state)
         {
             case "Happy":
-                if (friend)
-                {
-                    wayToGo = 1;
-                }
-                else
-                {
-                    wayToGo = 0;
-                }
                 
+
                 timer -= Time.deltaTime;
                 if (timer <= 0)
                 {
@@ -41,14 +33,7 @@ public class Signals : MonoBehaviour
                 //Debug.Log("happy");
                 break;
             case "Sad":
-                if (friend)
-                {
-                    wayToGo = -1;
-                }
-                else
-                {
-                    wayToGo = 1;
-                }
+                
 
                 //Debug.Log("sad");
                 break;
@@ -56,14 +41,16 @@ public class Signals : MonoBehaviour
                 break;
         }
 
-
     }
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Frienemy") {
+        if (collision.gameObject.tag == "Frienemy")
+        {
+            
 
         }
     }
+   
     public string ChangeState(bool activeState)
     {
         string state;
