@@ -6,7 +6,7 @@ public class Signals : MonoBehaviour
 {
     public float spendPoints = 1;
     public string state;
-    public static bool t = true;
+    public static bool t = true, friend;
     public static float wayToGo;
     public float timer = 1, nTimer;
     // Use this for initialization
@@ -19,10 +19,19 @@ public class Signals : MonoBehaviour
     void FixedUpdate()
     {
         state = ChangeState(t);
+        StateText.state = state;
         switch (state)
         {
             case "Happy":
-                wayToGo = 1;
+                if (friend)
+                {
+                    wayToGo = 1;
+                }
+                else
+                {
+                    wayToGo = 0;
+                }
+                
                 timer -= Time.deltaTime;
                 if (timer <= 0)
                 {
@@ -32,7 +41,15 @@ public class Signals : MonoBehaviour
                 //Debug.Log("happy");
                 break;
             case "Sad":
-                wayToGo = -1;
+                if (friend)
+                {
+                    wayToGo = -1;
+                }
+                else
+                {
+                    wayToGo = 1;
+                }
+
                 //Debug.Log("sad");
                 break;
             default:

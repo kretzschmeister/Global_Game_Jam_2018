@@ -31,6 +31,9 @@ public class FrienemyMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Signals.friend = friend;
+        
+
         Movement();
        if (follow && Signals.wayToGo<=0)
         {
@@ -62,20 +65,22 @@ public class FrienemyMovement : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player") {
-            timer -= Time.deltaTime;
-            if (timer <= 0) {
-                DamagePlayer(damage);
-                timer = nTimer;
+        if(!friend){
+            if (collision.gameObject.tag == "Player") {
+                timer -= Time.deltaTime;
+                if (timer <= 0) {
+                    DamagePlayer(damage);
+                    timer = nTimer;
+                }
             }
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-
+        //enemy doesnt move when clos
         if (collision.gameObject.tag == "Signal")
         {
-            if (distance >= range)
+            if (distance >= range || !friend)
             {
                 follow = false;
                 speed = nspeed;
