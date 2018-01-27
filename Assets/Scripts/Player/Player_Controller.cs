@@ -14,6 +14,7 @@ public class Player_Controller : MonoBehaviour
     public float timer =4;
     float nTimer;
 
+	public static float move;
 
     
     //variables for platform check
