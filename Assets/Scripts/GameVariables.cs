@@ -13,5 +13,6 @@ public static class GameVariables {
 	public static int keyCount = 0;
 	public static int gemCount;
 	public static int lives = 3;
+    public static float signalSwitcherPoints = 100;
 
 }
