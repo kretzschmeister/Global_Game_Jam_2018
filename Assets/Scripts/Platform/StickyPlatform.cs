@@ -28,15 +28,17 @@ public class StickyPlatform : MonoBehaviour {
 		target = null;
 
 	}
-
-	void OnTriggerStay2D(Collider2D col){
-		target = col.gameObject;
-		offset = target.transform.position - transform.position;
-
-	}
-	void onTriggerExit2D(Collider2D col){
+    private void OnCollisionStay2D(Collision2D col)
+    {
+        target = col.gameObject;
+        offset = target.transform.position - transform.position;
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Debug.Log("null");
 		target = null;
-	}
+    }
+    
 
 	void Update(){
 	
