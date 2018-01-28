@@ -113,6 +113,12 @@ public class Player_Controller : MonoBehaviour
         }
         anim.SetBool("Moving", moving);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Goal") {
+            SceneManager.LoadScene("Victory");
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "DeathPit") {

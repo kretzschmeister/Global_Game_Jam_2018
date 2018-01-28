@@ -9,6 +9,7 @@ TagManager:
   - DefendText
   - Signal
   - DeathPit
+  - Goal
   layers:
   - Default
   - TransparentFX
