@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseGame : MonoBehaviour {
-	bool paused;
+	public bool paused;
 	public bool missionHasEnded;
-	public GameObject canvas, pauseMenu, controlsMenu, exitMenu, returnText, quitText;
+	public GameObject canvas, pauseMenu;
 	public string menuToShow, buttonClicked;
 	private bool m_isInUse = false;
 
@@ -46,30 +46,14 @@ public class PauseGame : MonoBehaviour {
 		switch (menuToShow) {
 			case "Pause":
 				pauseMenu.SetActive (true);
-				controlsMenu.SetActive (false);
-				exitMenu.SetActive (false);
 				break;
 			case "Controls":
 				pauseMenu.SetActive (false);
-				controlsMenu.SetActive (true);
-				exitMenu.SetActive (false);
 				break;
 			case "Exit":
 				pauseMenu.SetActive (false);
-				controlsMenu.SetActive (false);
-				exitMenu.SetActive (true);
 
-                //Show return to menu or quit game screen depending on which of the two buttons have been clicked
-				switch (buttonClicked) {
-					case "Return":
-						returnText.SetActive (true);
-						quitText.SetActive (false);
-						break;
-					case "Quit":
-						returnText.SetActive (false);
-						quitText.SetActive (true);
-						break;
-				}
+                
 				break;
 		}
 	}

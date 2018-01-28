@@ -2085,11 +2085,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4284611638111364, guid: 5ef9f0ca7dd2bc349a70a301c957288d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.81
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4284611638111364, guid: 5ef9f0ca7dd2bc349a70a301c957288d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.52
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4284611638111364, guid: 5ef9f0ca7dd2bc349a70a301c957288d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2114,25 +2114,6 @@ Prefab:
     - target: {fileID: 4284611638111364, guid: 5ef9f0ca7dd2bc349a70a301c957288d, type: 2}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1560198968505832, guid: 5ef9f0ca7dd2bc349a70a301c957288d, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 58138448600426692, guid: 5ef9f0ca7dd2bc349a70a301c957288d,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 68031647503323066, guid: 5ef9f0ca7dd2bc349a70a301c957288d,
-        type: 2}
-      propertyPath: m_Points.Array.data[0].y
-      value: -0.38840008
-      objectReference: {fileID: 0}
-    - target: {fileID: 68031647503323066, guid: 5ef9f0ca7dd2bc349a70a301c957288d,
-        type: 2}
-      propertyPath: m_Points.Array.data[0].x
-      value: -0.28713894
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ef9f0ca7dd2bc349a70a301c957288d, type: 2}
