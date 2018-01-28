@@ -1070,6 +1070,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1485728680352132, guid: 17a2336d6137f5648b0a59630fb8edd3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 17a2336d6137f5648b0a59630fb8edd3, type: 2}
   m_IsPrefabParent: 0
@@ -2163,14 +2167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9393874539689214680ef34fa8db69c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 465067738}
-  pauseMenu: {fileID: 844609664}
-  controlsMenu: {fileID: 1029420077}
-  exitMenu: {fileID: 682859458}
-  returnText: {fileID: 1516606573}
-  quitText: {fileID: 1659844347}
-  menuToShow: 
-  buttonClicked: 
 --- !u!1 &1516606573
 GameObject:
   m_ObjectHideFlags: 0
@@ -2289,6 +2285,25 @@ Prefab:
     - target: {fileID: 4284611638111364, guid: 5ef9f0ca7dd2bc349a70a301c957288d, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560198968505832, guid: 5ef9f0ca7dd2bc349a70a301c957288d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 58138448600426692, guid: 5ef9f0ca7dd2bc349a70a301c957288d,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 68031647503323066, guid: 5ef9f0ca7dd2bc349a70a301c957288d,
+        type: 2}
+      propertyPath: m_Points.Array.data[0].y
+      value: -0.38840008
+      objectReference: {fileID: 0}
+    - target: {fileID: 68031647503323066, guid: 5ef9f0ca7dd2bc349a70a301c957288d,
+        type: 2}
+      propertyPath: m_Points.Array.data[0].x
+      value: -0.28713894
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ef9f0ca7dd2bc349a70a301c957288d, type: 2}
