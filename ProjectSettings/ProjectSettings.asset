@@ -12,9 +12,9 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: Global Game Jam 2018
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: dff9430ce26e06841ade2b98ac45c792, type: 3}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
@@ -41,7 +41,9 @@ PlayerSettings:
   - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
     duration: 2
   - logo: {fileID: 21300000, guid: 8249d6312dc54bf4a86f6562c3989387, type: 3}
-    duration: 3.6
+    duration: 2
+  - logo: {fileID: 21300000, guid: a1f06d532aae7ba4caaf1857a62f7bad, type: 3}
+    duration: 3.9
   m_SplashScreenBackgroundLandscape: {fileID: 0}
   m_SplashScreenBackgroundPortrait: {fileID: 0}
   m_VirtualRealitySplashScreen: {fileID: 0}
@@ -230,9 +232,15 @@ PlayerSettings:
     height: 180
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
-  resolutionDialogBanner: {fileID: 2800000, guid: 8249d6312dc54bf4a86f6562c3989387,
+  resolutionDialogBanner: {fileID: 2800000, guid: 07e8d4e0ebe8b0b4d8589265d6c1be1c,
     type: 3}
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: e37ffc95e4b2b234a926e402b5106366, type: 3}
+      m_Width: 128
+      m_Height: 128
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   m_BuildTargetVRSettings: []
@@ -504,7 +512,8 @@ PlayerSettings:
   webGLUseEmbeddedResources: 0
   webGLUseWasm: 0
   webGLCompressionFormat: 1
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    7: 7
   platformArchitecture: {}
   scriptingBackend: {}
   incrementalIl2cppBuild: {}
