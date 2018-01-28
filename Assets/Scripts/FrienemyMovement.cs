@@ -115,7 +115,7 @@ public class FrienemyMovement : MonoBehaviour
     {
         FindObjectOfType<SwitchBar>().SpendPoints(damage);
         FindObjectOfType<SwitchBar>().damaged = true;
-        FindObjectOfType<AudioManager>().Play("");
+        FindObjectOfType<AudioManager>().Play("damagePlayer");
     }
     private void OnCollisionStay2D(Collision2D collision)
     {

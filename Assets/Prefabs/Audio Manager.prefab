@@ -94,3 +94,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: damagePlayer
+    clip: {fileID: 8300000, guid: 51b514048e8e6924e8e34ea81e3f152b, type: 3}
+    volume: 8.29
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
