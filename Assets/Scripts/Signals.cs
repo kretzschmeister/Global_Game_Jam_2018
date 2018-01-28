@@ -6,7 +6,7 @@ public class Signals : MonoBehaviour
 {
     public float spendPoints = 1;
     public string state;
-    public static bool t = true, friend;
+    public static bool t = false, friend;
     public float timer = 1, nTimer;
     // Use this for initialization
     void Start()
