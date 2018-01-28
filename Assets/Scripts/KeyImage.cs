@@ -28,11 +28,11 @@ public class KeyImage : MonoBehaviour {
         if (GameVariables.keyCount >= 1)
         {
 
-
+            key = true;
             image.sprite = keySprite;
         }
         else {
-
+            key = false;
             image.sprite = noKeySprite;
         }
 

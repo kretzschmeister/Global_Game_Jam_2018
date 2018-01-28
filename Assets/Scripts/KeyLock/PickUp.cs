@@ -18,6 +18,7 @@ public class PickUp : MonoBehaviour {
 					break;
 				case "gem":
 					GameVariables.gemCount += 1;
+                    Destroy(gameObject);
 					break; 
 			}
 		}

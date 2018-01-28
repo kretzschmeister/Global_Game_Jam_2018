@@ -29,7 +29,7 @@ public class Button : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Frienemy") {
-            platform.GetComponent<MovePingPong>().move = true;
+           if(platform!=null) platform.GetComponent<MovePingPong>().move = true;
 
             spriteRenderer.sprite = buttonDownSprite;
 
