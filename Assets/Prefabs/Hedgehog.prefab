@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 58138448600426692}
   - component: {fileID: 114542284980161556}
   - component: {fileID: 95987767948075618}
+  - component: {fileID: 68031647503323066}
   m_Layer: 0
   m_Name: Hedgehog
   m_TagString: Frienemy
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560198968505832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.87, y: -1.39, z: 0}
+  m_LocalPosition: {x: -2.81, y: -1.52, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,12 +74,29 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.27722538}
   serializedVersion: 2
   m_Radius: 0.6110996
+--- !u!68 &68031647503323066
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1560198968505832}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.31757498, y: -0.36810923}
+  - {x: 0.41365004, y: -0.37677956}
 --- !u!95 &95987767948075618
 Animator:
   serializedVersion: 3
@@ -108,8 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friend: 0
+  danger: 0
   runningAway: 0
-  damage: 10
+  damage: 5
   speed: 2
   nspeed: 0
   wayToGo: 0
@@ -119,7 +138,8 @@ MonoBehaviour:
   rangeT: 3
   moveX: 0
   moveY: 0
-  timer: 1
+  timer: 2
+  scaryTime: 1
 --- !u!212 &212240701597285922
 SpriteRenderer:
   m_ObjectHideFlags: 1
