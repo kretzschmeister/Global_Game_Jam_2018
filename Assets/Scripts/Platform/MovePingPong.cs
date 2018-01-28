@@ -18,6 +18,8 @@ public class MovePingPong : MonoBehaviour
     //Rigidbody2D platformRB;
     public float moveTime = 1;
     bool moveBack;
+    public bool move;
+    float m = 0, time;
     private Vector3 startPos;
     public bool movingX;
     public bool movingY;
@@ -33,31 +35,38 @@ public class MovePingPong : MonoBehaviour
     }
 
     // Dont mess with this code , go into the inspector.
-    void Update()
+    void FixedUpdate()
     {
 
-        if (movingX)
+        if (move)
         {
-            if (startLeft)
-            {
-                transform.position = new Vector2(-PingPong(Time.time * moveTime, -startPos.x, -startPos.x + moveLength), transform.position.y);
-            }
-            else
-            {
-                transform.position = new Vector2(PingPong(Time.time * moveTime, startPos.x, startPos.x + moveLength), transform.position.y);
-            }
+            m++;
+            time = m / 60;
 
-        }
-        if (movingY)
-        {
-
-            if (startDown)
+            if (movingX)
             {
-                transform.position = new Vector2(transform.position.x, -PingPong(Time.time * moveTime, -startPos.y, -startPos.y + moveLength));
+                if (startLeft)
+                {
+                    transform.position = new Vector2(-PingPong(time * moveTime, -startPos.x, -startPos.x + moveLength), transform.position.y);
+                }
+                else
+                {
+                    transform.position = new Vector2(PingPong(time * moveTime, startPos.x, startPos.x + moveLength), transform.position.y);
+                }
+                time = Time.time;
             }
-            else
+            if (movingY)
             {
-                transform.position = new Vector2(transform.position.x, PingPong(Time.time * moveTime, startPos.y, startPos.y + moveLength));
+
+                if (startDown)
+                {
+                    transform.position = new Vector2(transform.position.x, -PingPong(time * moveTime, -startPos.y, -startPos.y + moveLength));
+                }
+                else
+                {
+                    transform.position = new Vector2(transform.position.x, PingPong(time * moveTime, startPos.y, startPos.y + moveLength));
+                }
+                time = Time.time;
             }
         }
     }

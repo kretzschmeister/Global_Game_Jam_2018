@@ -118,12 +118,12 @@ Prefab:
     - target: {fileID: 224517026282891860, guid: 4cb57decbada62b43a25c9b5c3656456,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224517026282891860, guid: 4cb57decbada62b43a25c9b5c3656456,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224022110088583806, guid: 4cb57decbada62b43a25c9b5c3656456,
         type: 2}
@@ -218,12 +218,12 @@ Prefab:
     - target: {fileID: 224216343938084454, guid: 4cb57decbada62b43a25c9b5c3656456,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224216343938084454, guid: 4cb57decbada62b43a25c9b5c3656456,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224517026282891860, guid: 4cb57decbada62b43a25c9b5c3656456,
         type: 2}
@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveTime: 1
+  move: 1
   movingX: 1
   movingY: 0
   startLeft: 0
@@ -409,6 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df4d266eb87f68243b190695e1cae31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collision: 0
 --- !u!61 &671174589
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -974,6 +976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveTime: 0.1
+  move: 0
   movingX: 0
   movingY: 1
   startLeft: 0
