@@ -6,8 +6,10 @@ public class OpenDoor : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D col){
 		if (col.gameObject.tag == "Player" && GameVariables.keyCount > 0) {
-		//destroy key and give key to player. 
-			GameVariables.keyCount -=1;
+            //destroy key and give key to player. 
+            FindObjectOfType<AudioManager>().Play("Open door");
+
+            GameVariables.keyCount -=1;
 			Destroy (gameObject);
 			//FindObjectOfType<AudioManager> ().Play ("OpenDoor");
 		}

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FrienemyMovement : MonoBehaviour
 {
+    float m;
     public bool friend = true, danger =false;
     public bool runningAway = false;
     public float damage = 10;
@@ -16,6 +17,7 @@ public class FrienemyMovement : MonoBehaviour
     Vector2 direction;
     Animator anim;
     float currentScale;
+    bool sound = true;
     public  float wayToGo;
     public bool follow = false;
     public float range = 0.25f, distance, rangeT = 3;
@@ -42,6 +44,16 @@ public class FrienemyMovement : MonoBehaviour
         Signals.friend = friend;
         State();
         if (danger) {
+            if (sound)
+            {
+                m -= Time.deltaTime;
+                if (m <= 0)
+                {
+                    sound = false;
+                    FindObjectOfType<AudioManager>().Play("Alert");
+                    m = 5;
+                }
+            }
             scaryTime -= Time.deltaTime;
             if (scaryTime <= 0) {
                 danger = false;
@@ -186,6 +198,7 @@ public class FrienemyMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Signal")
         {
+            sound = true;
             speed = 0;
             follow = false;
         }

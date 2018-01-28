@@ -2412,7 +2412,7 @@ PolygonCollider2D:
       - {x: 720, y: -139.875}
       - {x: 720, y: -140.125}
       - {x: 660, y: -140.125}
-      - {x: 660, y: -159.875}
+      - {x: 660, y: -159.54532}
       - {x: 720, y: -159.875}
       - {x: 720, y: -160}
       - {x: 734.375, y: -160}
@@ -3474,6 +3474,7 @@ Transform:
   - {fileID: 227283360}
   - {fileID: 1612701251}
   - {fileID: 518519496}
+  - {fileID: 1364325781}
   m_Father: {fileID: 1175101966}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4511,6 +4512,62 @@ Transform:
   m_Father: {fileID: 1175101966}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1364325780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1923647590620776, guid: 009e3af532c6e8a4a8c991f11f65bfaa,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1364325781}
+  - component: {fileID: 1364325782}
+  m_Layer: 0
+  m_Name: Collision (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1364325781
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4240524971311686, guid: 009e3af532c6e8a4a8c991f11f65bfaa,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1364325780}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 610.4, y: -158.4, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1009526604}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1364325782
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1364325780}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 18.485, y: -1.0808239}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 64.56578, y: 3.1616478}
+  m_EdgeRadius: 0
 --- !u!1 &1371677817 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1913987262095744, guid: d3bf476e819cf8f449fc9ad7f4c821eb,

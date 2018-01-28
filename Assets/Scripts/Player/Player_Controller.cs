@@ -9,7 +9,7 @@ public class Player_Controller : MonoBehaviour
 
     public float maxSpeed;
     Rigidbody2D myRB;
-
+    bool sound = true;
     //variables for happy/sad switch
     bool switchState = false;
     public float timer =4;
@@ -55,7 +55,10 @@ public class Player_Controller : MonoBehaviour
         //if ( Input.Getaxis("X" && sad   == true) ---> happy
         if ((Input.GetAxis("X") > 0 || Input.GetKeyDown(KeyCode.F)) && timer>=4 && SwitchBar.switchPoints >=0)
         {
-            timer = 0;
+            
+                FindObjectOfType<AudioManager>().Play("ChangeState");
+            
+                timer = 0;
             if (Signals.t)
             {
                 Signals.t = false;

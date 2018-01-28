@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Button : MonoBehaviour {
     public GameObject platform;
+    bool sound = true;
     SpriteRenderer spriteRenderer;
     public Sprite buttonUpSprite;
     public Sprite buttonDownSprite;
@@ -12,6 +13,7 @@ public class Button : MonoBehaviour {
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = buttonUpSprite;
+
     }
 
     // Update is called once per frame
@@ -32,7 +34,9 @@ public class Button : MonoBehaviour {
            if(platform!=null) platform.GetComponent<MovePingPong>().move = true;
 
             spriteRenderer.sprite = buttonDownSprite;
-
+            if (sound) {
+                sound = false;
+                FindObjectOfType<AudioManager>().Play("button"); }
         }
     }
 }

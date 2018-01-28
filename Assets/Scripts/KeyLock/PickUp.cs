@@ -14,10 +14,12 @@ public class PickUp : MonoBehaviour {
 			switch(variable){
 				case "key":
 					GameVariables.keyCount += 1;
+                    FindObjectOfType<AudioManager>().Play("pick up key");
 					Destroy (gameObject);
 					break;
 				case "gem":
 					GameVariables.gemCount += 1;
+                    FindObjectOfType<AudioManager>().Play("gem");
                     Destroy(gameObject);
 					break; 
 			}

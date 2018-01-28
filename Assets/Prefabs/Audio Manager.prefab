@@ -58,3 +58,39 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: ChangeState
+    clip: {fileID: 8300000, guid: 3c16deacb16aa6d49a1f2c9f7f53ee9d, type: 3}
+    volume: 4.43
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: gem
+    clip: {fileID: 8300000, guid: 81a61e49388cb514e8aba60b1de10871, type: 3}
+    volume: 8.29
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Open door
+    clip: {fileID: 8300000, guid: 7ad070cce1352cf40969931a0561af2d, type: 3}
+    volume: 8.29
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pick up key
+    clip: {fileID: 8300000, guid: 515479dfdcd3a0d47b31de6186f07886, type: 3}
+    volume: 8.29
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Alert
+    clip: {fileID: 8300000, guid: ad89e9e8122c14f478432bab4d62c31f, type: 3}
+    volume: 4.44
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: button
+    clip: {fileID: 8300000, guid: a57b2b15135cef74aa46e60941b0787a, type: 3}
+    volume: 8.29
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

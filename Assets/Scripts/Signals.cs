@@ -8,6 +8,7 @@ public class Signals : MonoBehaviour
     public string state;
     public static bool t = false, friend;
     public float timer = 1, nTimer;
+    bool sound = true;
     // Use this for initialization
     void Start()
     {
@@ -56,6 +57,8 @@ public class Signals : MonoBehaviour
         if (activeState)
         {
             state = "Happy";
+          
+            
         }
         else
         {
