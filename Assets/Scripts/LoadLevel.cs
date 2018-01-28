@@ -38,6 +38,7 @@ public class LoadLevel : MonoBehaviour {
         SceneManager.LoadScene(destinationLevel);
         GameVariables.keyCount = 0;
         GameVariables.gemCount = 0;
+        Signals.t = false;
         GameVariables.lives = 3;
     }
     void ExitGame()

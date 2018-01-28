@@ -1,0 +1,44 @@
+﻿# Tiled2Unity generated file. Do not modify by hand.
+# Wavefront file for 'RadioBoyLevel1.2_mesh_0007.obj'
+
+# Vertices (Count = 20)
+v -600 -80 0
+v -620 -80 0
+v -620 -60 0
+v -600 -60 0
+v -60 -120 0
+v -80 -120 0
+v -80 -100 0
+v -60 -100 0
+v -160 -140 0
+v -180 -140 0
+v -180 -120 0
+v -160 -120 0
+v -260 -140 0
+v -280 -140 0
+v -280 -120 0
+v -260 -120 0
+v -720 -140 0
+v -740 -140 0
+v -740 -120 0
+v -720 -120 0
+
+# Texture cooridinates (Count = 4)
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+
+# Normal
+vn 0 0 -1
+
+# Mesh description
+g RadioBoyLevel1.2_mesh_0007
+
+# Faces
+f 1/1/1 2/2/1 3/3/1 4/4/1
+f 5/1/1 6/2/1 7/3/1 8/4/1
+f 9/1/1 10/2/1 11/3/1 12/4/1
+f 13/1/1 14/2/1 15/3/1 16/4/1
+f 17/1/1 18/2/1 19/3/1 20/4/1
+
