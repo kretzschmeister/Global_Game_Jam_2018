@@ -37,7 +37,7 @@ public class StickyPlatform : MonoBehaviour {
     }
     private void OnCollisionExit2D(Collision2D col)
     {
-        Debug.Log("null");
+        //Debug.Log("null");
         collision = false;
 		target = null;
     }
@@ -47,7 +47,7 @@ public class StickyPlatform : MonoBehaviour {
 	
 		if (target !=null){
 			target.transform.position = transform.position + offset ;
-            Debug.Log("move");
+          //  Debug.Log("move");
 		}
 	}
 }
