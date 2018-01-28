@@ -80,6 +80,18 @@ public class Player_Controller : MonoBehaviour
             // this is an extra functional button
             //TODO: Add the extra functionality ! Maybe a door ?
         }
+        else if (Input.GetAxis("Triangle") > 0)
+        {
+
+            // this is an extra functional button
+            //TODO: Add the extra functionality ! Maybe a door ?
+        }
+        else if (Input.GetAxis("Circle") > 0)
+        {
+
+            // this is an extra functional button
+            //TODO: Add the extra functionality ! Maybe a door ?
+        }
     }
     void Animation() {
         if (myRB.velocity.x != 0)
