@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class StickyPlatform : MonoBehaviour {
 
-	// Use this for initialization
+    // Use this for initialization
 
-	/*
+    /*
 	void OntriggerStay2D(Collider2D col){
 		if (col.gameObject.tag == "Platform") {
 			transform.parent = col.transform;
@@ -19,7 +19,7 @@ public class StickyPlatform : MonoBehaviour {
 
 		}
 	} */
-
+    public bool collision;
 
 	private GameObject target =null;
 	private Vector3 offset;
@@ -30,12 +30,15 @@ public class StickyPlatform : MonoBehaviour {
 	}
     private void OnCollisionStay2D(Collision2D col)
     {
+
         target = col.gameObject;
         offset = target.transform.position - transform.position;
+        collision = true;
     }
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionExit2D(Collision2D col)
     {
         Debug.Log("null");
+        collision = false;
 		target = null;
     }
     
@@ -44,6 +47,7 @@ public class StickyPlatform : MonoBehaviour {
 	
 		if (target !=null){
 			target.transform.position = transform.position + offset ;
+            Debug.Log("move");
 		}
 	}
 }

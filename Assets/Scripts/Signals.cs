@@ -18,7 +18,6 @@ public class Signals : MonoBehaviour
     void FixedUpdate()
     {
         state = ChangeState(t);
-        StateText.state = state;
         switch (state)
         {
             case "Happy":
