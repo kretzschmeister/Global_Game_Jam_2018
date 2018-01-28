@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Controller : MonoBehaviour
 {
@@ -99,5 +100,11 @@ public class Player_Controller : MonoBehaviour
             transform.localScale = new Vector3(currentScale, currentScale, 1);
         }
         anim.SetBool("Moving", moving);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "DeathPit") {
+            SceneManager.LoadScene("Game Over");
+        }
     }
 }
